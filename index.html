@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohab& Habiba - Wedding Invitation</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohab & Habiba</title>
+
+  <!-- Open Graph / WhatsApp Preview Tags -->
+  <meta property="og:title" content="Mohamed & Nourhan">
+  <meta property="og:description" content="We invite you to the wedding of Mohab & Habiba | Wednesday, November 27, 2026 | Tiba Rose venue, 537 Line 7">
+  <meta property="og:image" content="https://your-domain.com/path-to-preview-image.jpg">
+  <meta property="og:url" content="https://your-domain.com/invitation-link">
+  <meta property="og:type" content="website">
+</head>
+    <style>
+        :root {
+            --bg-color: #f5f4f0;
+            --text-gold: #9c8059;
+            --text-dark: #8b6d47;
+            --bg-brown: #876943;
+            --border-color: #d8cebe;
+            --font-script: 'Pinyon Script', cursive;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-gold);
+            font-family: var(--font-serif);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+
+        /* --- UI Elements --- */
+        .audio-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+            cursor: pointer;
+            border: none;
+            color: var(--text-gold);
+        }
+
+        .divider-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            opacity: 0.6;
+        }
+        
+        .divider-icon::before, .divider-icon::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background-color: currentColor;
+            margin: 0 15px;
+            opacity: 0.5;
+        }
+
+        .flower-divider {
+            width: 150px;
+            margin: 40px auto;
+            opacity: 0.5;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        /* 1. Hero Section (Video Background) */
+        .hero-video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-top-text {
+            font-family: var(--font-sans);
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-names {
+            font-family: var(--font-script);
+            font-size: 5.5rem;
+            line-height: 1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin: -10px 0;
+        }
+        
+        .hero-amp {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        
+        .hero-date {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 1;
+        }
+        
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        
+        /* Envelope Cover Styles */
+.envelope-screen {
+    position: fixed;
+    inset: 0; /* by3ml top, bottom, left, right : 0 */
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* 3ashan yb2a fo2 ay 7aga fl website */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4f0;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.env-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.seal-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+
+.gold-seal {
+    width: 120px; /* Zabaty el ma2as 3ala hasab sortek */
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.seal-container:hover .gold-seal {
+    transform: scale(1.1);
+}
+
+.click-hint {
+    margin-top: 15px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #8b6d47;
+    opacity: 0.7;
+}
+
+/* Animation lma ndoos */
+.envelope-screen.opened {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.1); /* By3ml effect eno bykber w ykhtefy */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 3ashan nwa2af scroll el saf7a w el envelope ma2fool */
+body.locked {
+    overflow: hidden;
+}
+/* Envelope Cover Styles Update */
+.envelope-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    cursor: pointer; /* Ykhaly el shasha kolaha clickable */
+    background-color: #f5f4f0;
+    transition: opacity 1s ease-in-out; /* Fade effect */
+}
+
+.env-video, .env-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 3ashan ymaly el shasha kowayes */
+}
+
+.env-bg {
+    z-index: 2; /* Fo2 el video */
+    transition: opacity 0.5s ease; /* 3ashan tkhtefy b-n3oma lma ndoos */
+}
+
+.env-video {
+    z-index: 1; /* Taht el sora */
+}
+
+/* Class hydeefo el JavaScript 3ashan ykhfy el shasha b3d ma tftah */
+.envelope-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+/* مثال: لو اسم الكلاس عندك slider-container */
+/* 4. Our Moments (Our updated Slider) */
+/* تنسيق السكشن العام ليشبه البطاقة في الصورة */
+.closing-page-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f1ea; /* لون خلفية هادئ متناسق مع التصميم */
+    padding: 20px;
+    direction: rtl;
+}
+
+/* الكارد الكامل للقسم */
+.closing-card-full {
+    background-color: #fdfbf7; /* لون كارد فاتح ودافئ */
+    border: 1px solid #e8e1d3;
+    border-radius: 20px;
+    padding: 50px 30px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* تنسيق الآية القرآنية الكريمة */
+.quran-verse p {
+    font-family: 'Amiri', 'Aref Ruqaa', serif; /* استخدام خط عربي أصيل مثل الأميري أو الرقعة */
+    font-size: 1.6rem;
+    line-height: 2.2;
+    color: #4a3b32; /* لون برونزي/بني غامق فخم */
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* تنسيق الفاصل الذهبي */
+.golden-divider-wrapper {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.golden-divider-img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* تنسيق نصوص الشكر والدعوة */
+.closing-text-blocks {
+    margin-top: 30px;
+}
+
+.main-thank-you {
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #5c4a3f;
+    margin-bottom: 20px;
+}
+
+.waiting-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6b5648;
+}
+
+
+
+.invitation-full-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.full-screen-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill; /* dah el by5ly el sora ttdws w tmla2 el shasha kamla mn fo2 w t7t w ymen w shmal bel zbt mn 8ayr ay qeṭaa */
+    display: block;
+}
+
+/* تنسيق السكشن العام ليشمل الصفحة الجديدة بالكامل بخلفية هادئة */
+/* تنسيق السكشن الثالث بالكامل */
+.third-page-section {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f7f4ed; /* خلفية كريمي هادئة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    direction: ltr; /* عشان الـ Countdown يفضل من الشمال لليمين شيك */
+}
+
+.content-wrapper {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* تنسيق قسم العد التنازلي */
+.countdown-part {
+    margin-bottom: 20px;
+}
+
+.countdown-main-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #4a3b32;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.divider-wrapper {
+    margin: 10px 0 20px 0;
+}
+
+.countdown-divider-img {
+    width: 100px;
+    height: auto;
+    opacity: 0.85;
+}
+
+.inline-timer-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b2e25;
+    font-family: 'Georgia', serif;
+}
+
+.unit-label {
+    font-size: 0.85rem;
+    color: #7a6555;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.timer-colon {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5c4a3f;
+    margin-top: -15px;
+}
+
+/* الفاصل بين القسمين */
+.section-spacer {
+    margin: 25px 0;
+}
+
+.spacer-icon {
+    width: 40px;
+    height: auto;
+    opacity: 0.7;
+}
+
+/* تنسيق قسم موقع القاعة */
+.location-part {
+    text-align: center;
+}
+
+.location-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #4a3b32;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.venue-name-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #5c4a3f;
+    margin: 4px 0;
+}
+
+/* تنسيق صورة الخريطة واللينك */
+.map-link {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.map-image-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #d4c5b9;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.map-image-card:hover {
+    transform: translateY(-3px);
+}
+
+.map-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(59, 46, 37, 0.75);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+/* تنسيق سكشن صورة الذكريات الناقص */
+.photo-page-section {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f4ed;
+    padding: 40px 20px;
+}
+
+.photo-card-container {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #d4c5b9;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.framed-memory-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.footer-credit {
+  text-align: center;
+  padding: 15px 0;
+  font-family: 'Times New Roman', Times, serif, 'Cinzel', serif; /* Ikhtiyar khat aniq w saghir qrib lil-sura */
+}
+
+.credit-link {
+  color: #3b2226; /* Al-lawn al-buni al-gamiq al-mawgod fi al-sura */
+  text-decoration: none;
+  font-size: 12px; /* Khat saghir giddan kaima tlabti */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.code-icon {
+  stroke: #3b2226;
+}
+
+    </style>
+</head>
+<body>
+ <!-- Envelope Intro Screen -->
+<div id="envelope-screen" class="envelope-screen" onclick="openInvitation()">
+    <!-- 1. El video elly hy-play lma ndoos (Mkfy wra el sora fl awel) -->
+    <video id="envelope-video" class="env-video" muted playsinline preload="auto">
+        <source src="./goldleaf-offwhite-open.mp4" type="video/mp4">
+    </video>
+    
+    <!-- 2. El sora el thabta (El envelope ma2fool) di elly htban fl awel -->
+    <img id="envelope-static" src="https://wedvite.net/envelopes/goldleaf-offwhite-open-poster.jpg" class="env-bg" alt="Envelope Closed">
+</div>
+    <!-- Audio Button -->
+     <!-- عنصر الصوت المخفي -->
+<audio id="bg-music" loop preload="auto">
+    <source src="./Albumaty.Com_hsyn_algsmy_edkhly_amry.mp3" type="audio/mp3">
+</audio>
+   <!-- Audio Button -->
+<button class="audio-btn" id="audio-control-btn" onclick="toggleAudio()">
+    <svg id="audio-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+</button>
+
+    <!-- Hero Section (Video Background) -->
+    <section class="hero-video-section">
+        <!-- Background Video -->
+        <video class="bg-video" autoplay loop muted playsinline>
+            <!-- 7oti masar el video bta3ek hena -->
+            <source src="./hero-video.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="video-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-top-text">We're Getting Married</div>
+            <div class="hero-names gs-reveal">Mohab</div>
+            <div class="hero-amp">&</div>
+            <div class="hero-names gs-reveal">Habiba</div>
+            
+            <div class="divider-icon" style="color: #ffffff;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            
+           
+        </div>
+        
+        <div class="scroll-down">
+            <div class="scroll-arrow">↓</div>
+            Scroll Down
+        </div>
+    </section>
+
+
+
+<section class="closing-page-section">
+    <div class="closing-card-full">
+        
+        <!-- الآية القرآنية الكريمة (تكبير النص والخط) -->
+        <div class="quran-verse">
+            <p>
+                « وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ »
+            </p>
+        </div>
+
+        <!-- الفاصل الذهبي الأنيق (نفس اللي في الأول) -->
+        <div class="golden-divider-wrapper">
+            <img src="./photo3.webp" alt="Divider" class="golden-divider-img">
+        </div>
+
+        <!-- نصوص الشكر والدعوة (تكبير النص) -->
+        <div class="closing-text-blocks">
+            <p class="main-thank-you">
+                يسعدنا ويشرفنا حضوركم ومشاركتكم أجمل لحظات فرحتنا، فوجودكم بيننا هو أجمل هدية وأغلى ما يكتمل به هذا اليوم المميز.
+            </p>
+            
+            <p class="waiting-text">
+                ننتظر حضوركم بكل محبة لنحتفل معاً ونصنع ذكريات لا تُنسى.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="photo-page-section">
+    <div class="photo-card-container">
+        <img src="./thirdpage.jfif" alt="Memory Photo" class="framed-memory-img">
+    </div>
+</section>
+
+
+
+
+<section class="third-page-section">
+    <div class="content-wrapper">
+        
+        <!-- الجزء الأول: العد التنازلي -->
+        <div class="countdown-part">
+           <h2 class="countdown-main-title">Countdown to our special day</h2>
+            
+            <div class="divider-wrapper">
+                <img src="./photo3.webp" alt="Divider" class="countdown-divider-img">
+            </div>
+
+            <div class="inline-timer-display" id="countdown-timer">
+                <div class="timer-unit">
+                    <span id="days" class="number-display">00</span>
+                    <span class="unit-label">Days</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-unit">
+                    <span id="hours" class="number-display">00</span>
+                    <span class="unit-label">Hours</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-unit">
+                    <span id="minutes" class="number-display">00</span>
+                    <span class="unit-label">Minutes</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-unit">
+                    <span id="seconds" class="number-display">00</span>
+                    <span class="unit-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- فاصل بسيط بين الجزءين -->
+        <div class="section-spacer">
+            <img src="./Vector.png.webp" class="spacer-icon" alt="Divider">
+        </div>
+
+        <!-- الجزء الثاني: موقع القاعة -->
+        <div class="location-part">
+            <h3 class="location-title">Wedding Location</h3>
+            <p class="venue-name-text">    Tiba Rose Hotel</p>
+            <p class="venue-name-text">    Lana Hall  </p>
+            <p class="venue-name-text">    El moshir road   </p>
+
+            <!-- الصورة القابلة للضغط للذهاب للخرائط -->
+            <a href="https://maps.app.goo.gl/DkR37phu4sgSC7xq5?g_st=iw" target="_blank" rel="noopener noreferrer" class="map-link">
+                <div class="map-image-card">
+                    <img src="./map.jfif" alt="موقع القاعة على الخريطة" class="map-img">
+                    <div class="map-overlay">
+                        <span>   Click to open in Google Maps</span>
+                    </div>
+                </div>
+            </a>
+
+          
+        </div>
+
+    </div>
+</section>
+
+<div class="footer-credit">
+  <a href="https://www.instagram.com/youra_coding" target="_blank" class="credit-link">
+    <svg class="code-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+    </svg>
+    <span>Our Page: Youra-Coding</span>
+  </a>
+</div>
+
+
+
+
+
+
+    <!-- GSAP for Cinematic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Subtle entrance animation for Hero text
+        gsap.from(".hero-names", {
+            y: 30,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // Fade in sections on scroll
+        gsap.utils.toArray('section:not(.hero-video-section)').forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+        });
+        // Set the date we're counting down to (22 November 2026, 5:00 PM)
+// تحديد تاريخ زفافكم المحدد: 27 نوفمبر 2027 الساعة 7:00 مساءً
+const weddingDate = new Date("November 27, 2026 19:00:00").getTime();
+
+const countdownTimer = setInterval(function() {
+    const now = new Date().getTime();
+    const timeLeft = weddingDate - now;
+
+    if (timeLeft < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // وضع الأرقام في الـ HTML مع الحفاظ على خانتين (0 ع الشمال لو الرقم أصغر من 10)
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+}, 1000);
+// E2fely el scroll awel ma el saf7a t-load
+document.body.classList.add('locked');
+function openInvitation() {
+    const staticImg = document.getElementById('envelope-static');
+    const video = document.getElementById('envelope-video');
+    const envelopeScreen = document.getElementById('envelope-screen');
+    
+    // --- Zody el satr dah hena 3ashan el o8nya tsht8l awl ma ndoos ---
+    const music = document.getElementById('bg-music');
+    music.play().catch(error => {
+        console.log("Autoplay blocked:", error);
+    });
+
+    // 1. Ekhfy el sora el thabta (el poster)
+    staticImg.style.opacity = '0';
+    
+    // 2. Sha3'aly video el envelope w howa bytfte7
+    video.play();
+    
+    // 3. Awel ma el video ykhlas, ekhfy el shasha kolaha w efta7y el scroll
+    video.onended = function() {
+        envelopeScreen.classList.add('hidden');
+        document.body.classList.remove('locked');
+        setTimeout(() => {
+            ScrollTrigger.refresh(); 
+            window.dispatchEvent(new Event('resize')); 
+        }, 100);
+    };
+    
+    // (Backup) law el video fahto tawel aw fih moshkela, nkhfeh b3d 3.5 sawany
+    setTimeout(() => {
+        envelopeScreen.classList.add('hidden');
+        document.body.classList.remove('locked');
+    }, 3500); 
+}
+
+
+// اختياري: لو حابة الأغنية تشتغل لوحدها أول ما العميل يفتح الظرف (يكليك على الشاشة)
+// تقدري تزودي السطر ده جوه دالة openInvitation بتاعتك:
+// document.getElementById('bg-music').play();
+    </script>
+</body>
+</html>
