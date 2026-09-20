@@ -594,6 +594,73 @@ body.locked {
   stroke: #3b2226;
 }
 
+.save-the-date-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f1eb; /* لون خلفية هادئ وفخم */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.save-date-content {
+    margin-bottom: 40px;
+}
+
+.save-date-content .sub-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5rem;
+    color: #c5a059; /* لون ذهبي */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.save-date-content .date-title {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.save-date-content .date-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.date-badge {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    background: #fff;
+}
+
+/* تنسيق صورة الذكريات والشريط الذهبي */
+.memories-photo-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.memories-composite-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+}
+
     </style>
 </head>
 <body>
@@ -684,6 +751,21 @@ body.locked {
         <img src="./thirdpage.jfif" alt="Memory Photo" class="framed-memory-img">
     </div>
 </section>
+
+
+
+<!-- Save the Date Section -->
+<section class="save-the-date-section">
+    
+
+    <!-- قسم الصورة المركبة (الإطارات والشريط الذهبي) -->
+    <div class="memories-photo-container">
+        <img src="./couples.jfif" alt="Our Memories" class="memories-composite-img">
+    </div>
+</section>
+
+
+
 
 
 
